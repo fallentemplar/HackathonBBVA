@@ -17,6 +17,7 @@ log = logging.getLogger(__name__)
 
 class EmpadiController:
     def __init__(self):
+        self.short_url = ""
         #self.conn = sqlite3.connect("tickets.db")
         self.domain = "ec2-18-191-203-36.us-east-2.compute.amazonaws.com"
         self.server_url = "http://" + self.domain #+ ":5000/"
@@ -36,7 +37,6 @@ class EmpadiController:
         c = canvas.Canvas(self.apache_path + self.f_name, pagesize=letter)
         c.drawImage("logoBBVA.jpg",10,650, width=200, height=180)
         c.setFont("Helvetica",12)
-        c.drawString(185,700,"MIREYA BERENICE RODRIGUEZ BAHENA")
         c.setFillColor(blue)
         c.setFont("Helvetica",18)
         c.drawString(26,670,"Comprar/Contratar-Pago automático de Tarjeta de")
@@ -54,9 +54,9 @@ class EmpadiController:
         c.drawString(125,490,"Motivo de pago:       ")
         c.drawString(125,470,"Fecha de operación:       " + data["fecha"])
         c.drawString(124,450,"Folio de operación:       " + data["numeroTransaccion"])
-        c.drawString(86,430,"Ciudad:        " + data["ciudadOrigen"])
+        c.drawString(150,430,"Ciudad:        " + data["ciudadOrigen"])
         c.setFillColor(lightblue)
-        c.rect(26,320,390,120, fill = True, stroke=False)
+        c.rect(26,290,410,120, fill = True, stroke=False)
         c.setFillColor(black)
         c.setFont("Helvetica",13)
         c.drawString(29,390,"En caso de no reconocer esta operación, comunícate al 01800 22 62")
@@ -75,7 +75,7 @@ class EmpadiController:
         client.messages.create(
             to = myPhone,
             from_ = TwilioNumber,
-        body='I sent a text message from Python! ' + u'\U0001f680')
+        body='En el siguiente enlace encontraras tu comprobante electronico '+ self.short_url +' Gracias por usar nuestros servidios Bancomer'+ u'\U0001f680')
 
     def __store_file(self):
         with open(self.apache_path + self.f_name, "rb") as f:
@@ -93,6 +93,7 @@ class EmpadiController:
         if r.status_code == requests.codes.ok:
             link = r.json()
             log.debug("url original: {}\nurl corta: {}".format(link["destination"], link["shortUrl"]))
+            self.short_url = link["shortUrl"]
             petition_response = {"shortUrl": link["shortUrl"]}
         else:
             petition_response = {"shortUrl": ''}
@@ -126,11 +127,11 @@ def create():
         log.debug("url original: {}\nurl corta: {}".format(link["destination"], link["shortUrl"]))"""
     return controller.create_ticket(request.get_json())
 
-@app.route("/sms")
+@app.route("/sms", methods=['POST'])
 def send_sms():
-    j = request.get_json()
+    # j = request.get_json()
     controller.send_sms()
-    return "{}"
+    return "{\"status\": \"Sent Message\"}"
 
 @app.route("/consult/<ticketid>")
 def consult(ticketid):
