@@ -1,0 +1,16 @@
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\EMPADI.exe.config
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\EMPADI.exe
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\EMPADI.pdb
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.csprojResolveAssemblyReference.cache
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.Properties.Resources.resources
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.csproj.GenerateResource.Cache
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.exe
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.pdb
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.resumenOperacion.resources
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.pantallaEspera.resources
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\obj\Debug\EMPADI.PantallaElegirComprobante.resources
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\Gma.QrCodeNet.Encoding.dll
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\Gma.QrCodeNet.Encoding.pdb
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\Gma.QrCodeNet.Encoding.xml
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alexis\documents\visual studio 2015\Projects\HackathonBBVA\EMPADI\bin\Debug\Newtonsoft.Json.xml
