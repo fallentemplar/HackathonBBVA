@@ -75,7 +75,7 @@ class EmpadiController:
         client.messages.create(
             to = myPhone,
             from_ = TwilioNumber,
-        body='En el siguiente enlace encontraras tu comprobante electronico '+ self.short_url +' Gracias por usar nuestros servidios Bancomer'+ u'\U0001f680')
+        body='En el siguiente enlace encontraras tu comprobante electronico '+ self.short_url +' Gracias por usar nuestros servicios Bancomer'+ u'\U0001f680')
 
     def __store_file(self):
         with open(self.apache_path + self.f_name, "rb") as f:
